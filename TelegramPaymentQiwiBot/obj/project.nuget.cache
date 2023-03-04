@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "qn6Sz71r7pmJZeEfgGhzOiE7Xb3QBCIarffoscq+kISuRWVuB67eOqoXU0JUtksN/XjAAt1DQBxeANA3Tzx+TQ==",
+  "success": true,
+  "projectFilePath": "/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot.csproj",
+  "expectedPackageFiles": [
+    "/home/omon/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
+    "/home/omon/.nuget/packages/qiwi.billpayments/0.1.5/qiwi.billpayments.0.1.5.nupkg.sha512",
+    "/home/omon/.nuget/packages/telegram.bot/18.0.0/telegram.bot.18.0.0.nupkg.sha512",
+    "/home/omon/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.2/microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

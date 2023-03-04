@@ -1,0 +1,95 @@
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.deps.json
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.runtimeconfig.json
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.dll
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.pdb
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/Newtonsoft.Json.dll
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/Qiwi.BillPayments.dll
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/Telegram.Bot.dll
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.AssemblyReference.cache
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.GeneratedMSBuildEditorConfig.editorconfig
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.AssemblyInfoInputs.cache
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.AssemblyInfo.cs
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.CoreCompileInputs.cache
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.CopyComplete
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.dll
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/refint/TelegramPaymentQiwiBot.dll
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.pdb
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.genruntimeconfig.cache
+/home/omon/projects/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/ref/TelegramPaymentQiwiBot.dll
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.exe
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.deps.json
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.runtimeconfig.json
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.dll
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.pdb
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/Newtonsoft.Json.dll
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/Qiwi.BillPayments.dll
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/Telegram.Bot.dll
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.AssemblyReference.cache
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.AssemblyInfoInputs.cache
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.AssemblyInfo.cs
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.CoreCompileInputs.cache
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.CopyComplete
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.dll
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/refint/TelegramPaymentQiwiBot.dll
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.pdb
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.genruntimeconfig.cache
+C:/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/ref/TelegramPaymentQiwiBot.dll
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.deps.json
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.runtimeconfig.json
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.dll
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.pdb
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/Newtonsoft.Json.dll
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/Qiwi.BillPayments.dll
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/Telegram.Bot.dll
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.AssemblyReference.cache
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.GeneratedMSBuildEditorConfig.editorconfig
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.AssemblyInfoInputs.cache
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.AssemblyInfo.cs
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.CoreCompileInputs.cache
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.CopyComplete
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.dll
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/refint/TelegramPaymentQiwiBot.dll
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.pdb
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.genruntimeconfig.cache
+/run/media/omon/Windows/Users/19et7/Desktop/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/ref/TelegramPaymentQiwiBot.dll
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.deps.json
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.runtimeconfig.json
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.dll
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.pdb
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/Newtonsoft.Json.dll
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/Qiwi.BillPayments.dll
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/bin/Debug/net7.0/Telegram.Bot.dll
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.AssemblyReference.cache
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.GeneratedMSBuildEditorConfig.editorconfig
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.AssemblyInfoInputs.cache
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.AssemblyInfo.cs
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.CoreCompileInputs.cache
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.CopyComplete
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.dll
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/refint/TelegramPaymentQiwiBot.dll
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.pdb
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.genruntimeconfig.cache
+/home/omon/Рабочий стол/TelegramPaymentQiwiBot/TelegramPaymentQiwiBot/obj/Debug/net7.0/ref/TelegramPaymentQiwiBot.dll
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.deps.json
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.runtimeconfig.json
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.dll
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/bin/Debug/net7.0/TelegramPaymentQiwiBot.pdb
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/bin/Debug/net7.0/Newtonsoft.Json.dll
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/bin/Debug/net7.0/Qiwi.BillPayments.dll
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/bin/Debug/net7.0/Telegram.Bot.dll
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.AssemblyReference.cache
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.GeneratedMSBuildEditorConfig.editorconfig
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.AssemblyInfoInputs.cache
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.AssemblyInfo.cs
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.CoreCompileInputs.cache
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.csproj.CopyComplete
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.dll
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/obj/Debug/net7.0/refint/TelegramPaymentQiwiBot.dll
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.pdb
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/obj/Debug/net7.0/TelegramPaymentQiwiBot.genruntimeconfig.cache
+/home/omon/projects/TelegramBotQiwiPayment/TelegramPaymentQiwiBot/obj/Debug/net7.0/ref/TelegramPaymentQiwiBot.dll
