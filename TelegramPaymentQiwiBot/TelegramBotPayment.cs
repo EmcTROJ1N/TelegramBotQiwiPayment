@@ -23,7 +23,7 @@ namespace TelegramPaymentQiwiBot
         private string PublicKey;
         
         private IList<BaseOffer> Offers;
-        private IList<Order> Orders;
+        private IList<Order>? Orders;
         public long ReportEntityId { get; set; }
         public string UsersFileName { get; set; } = "savedOrders.json";
         private Timer KickTiemer = new Timer();
@@ -45,10 +45,10 @@ namespace TelegramPaymentQiwiBot
 
         }
 
-        private async void KickTimerOnElapsed(object? sender, ElapsedEventArgs e)
+        private void KickTimerOnElapsed(object? sender, ElapsedEventArgs e)
         {
             List<int> expired = new List<int>();
-            for(int i = 0; i < Orders.Count; i++)
+            for(int i = 0; i < Orders?.Count; i++)
             {
                 if (Orders[i].Until < DateTime.Now)
                 {
@@ -58,12 +58,19 @@ namespace TelegramPaymentQiwiBot
             }
             
             expired.Reverse();
+            bool update = false;
             foreach (var idx in expired)
-                Orders.RemoveAt(idx);
-            Console.WriteLine("Список обновлен (удалено)");
-            
-            File.WriteAllText(UsersFileName, JsonSerializer.Serialize(Orders, new JsonSerializerOptions { WriteIndented = true }));
-            Console.WriteLine("База обновлена");
+            {
+                Orders?.RemoveAt(idx);
+                update = true;
+            }
+            if (update)
+            {
+                Console.WriteLine("List updated (deleted)");
+                File.WriteAllText(UsersFileName, JsonSerializer.Serialize(Orders, new JsonSerializerOptions { WriteIndented = true }));
+                Console.WriteLine("Base updated");
+            }
+
         }
 
         public void StartHear()
@@ -109,13 +116,17 @@ namespace TelegramPaymentQiwiBot
                 string? until = currentOffer?.Duration == TimeSpan.MaxValue 
                     ? "бессрочно"
                     : (DateTime.Now + currentOffer?.Duration).ToString();
-                await BotClient.EditMessageTextAsync(update.CallbackQuery.Message.Chat.Id,
-                    update.CallbackQuery.Message.MessageId,
-                    $"Тариф: {currentOffer?.OfferName}\n" +
-                    $"Стоимость: {currentOffer?.Price} {currentOffer?.Currency} \n" +
-                    $"Срок действия до: {until} \n" +
-                    currentOffer?.Comment,
-                    replyMarkup: monthPriceMarkup);
+
+                try
+                {
+                    await BotClient.EditMessageTextAsync(update.CallbackQuery.Message.Chat.Id,
+                        update.CallbackQuery.Message.MessageId,
+                        $"Тариф: {currentOffer?.OfferName}\n" +
+                        $"Стоимость: {currentOffer?.Price} {currentOffer?.Currency} \n" +
+                        $"Срок действия до: {until} \n" +
+                        currentOffer?.Comment,
+                        replyMarkup: monthPriceMarkup);
+                } catch {}
             }
 
             if ((from offer in Offers select $"{offer.OfferName}Pay").Contains(update.CallbackQuery?.Data))
@@ -140,10 +151,14 @@ namespace TelegramPaymentQiwiBot
                     InlineKeyboardMarkup confirmPayMonthMarkup =
                         new InlineKeyboardMarkup(new[] { confirmPayButton, backToOfferButton });
 
-                    await BotClient.EditMessageTextAsync(update.CallbackQuery.Message.Chat.Id,
-                        update.CallbackQuery.Message.MessageId,
-                        "✅ Счёт на оплату сформирован. Запросы к услугам будут выполнены как только вы оплатите его.",
-                        replyMarkup: confirmPayMonthMarkup);
+                    try
+                    {
+                        await BotClient.EditMessageTextAsync(update.CallbackQuery.Message.Chat.Id,
+                            update.CallbackQuery.Message.MessageId,
+                            "✅ Счёт на оплату сформирован. Запросы к услугам будут выполнены как только вы оплатите его.",
+                            replyMarkup: confirmPayMonthMarkup);
+                    } catch {}
+
                 }
             }
 
@@ -154,22 +169,41 @@ namespace TelegramPaymentQiwiBot
                     select offer).First();
                 string billId = Guid.NewGuid().ToString();
                 Uri paymentLink = BillClient.CreatePaymentForm(
-                     paymentInfo: new PaymentInfo()
-                     {
-                         PublicKey = PublicKey,
-                         Amount = new MoneyAmount()
-                         {
-                             ValueDecimal = currentOffer.Price,
-                             CurrencyEnum = currentOffer.Currency
-                         },
-                         BillId = billId,
-                     }
-                 );
-                
-                await BotClient.EditMessageTextAsync(update.CallbackQuery.Message.Chat.Id,
-                    update.CallbackQuery.Message.MessageId,
-                    $"✅ Вот ваш счет на оплату: {paymentLink} \n" +
-                    "✅ Как только оплата будет совершена вы можете вступить в чат по ссылке: https://t.me/+JLrfAU7HFL45OTZi");
+                    paymentInfo: new PaymentInfo()
+                    {
+                        PublicKey = PublicKey,
+                        Amount = new MoneyAmount()
+                        {
+                            ValueDecimal = currentOffer.Price,
+                            CurrencyEnum = currentOffer.Currency
+                        },
+                        BillId = billId,
+                    }
+                );
+
+                if (currentOffer is PrivateChannelInviterOffer)
+                {
+                    PrivateChannelInviterOffer inviteOffer = currentOffer as PrivateChannelInviterOffer;
+                    try
+                    {
+                        if (inviteOffer.ChannelInviteLink == null)
+                        {
+                            inviteOffer.ChannelInviteLink = await BotClient.CreateChatInviteLinkAsync(
+                                new ChatId((long)inviteOffer.Channel!),
+                                "Bot`s link",
+                                null,
+                                null,
+                                true,
+                                cancellationToken);
+                        }
+
+                        await BotClient.EditMessageTextAsync(update.CallbackQuery.Message.Chat.Id,
+                            update.CallbackQuery.Message.MessageId,
+                            $"✅ Вот ваш счет на оплату: {paymentLink} \n" +
+                            $"✅ Как только оплата будет совершена вы можете вступить в чат по ссылке: {inviteOffer.ChannelInviteLink.InviteLink}");
+                    }
+                    catch (Exception ex) { Console.WriteLine(ex.Message); }
+                }
 
                 CheckPayment(new Order(update.CallbackQuery.From.Id, currentOffer.Id, 
                     currentOffer.Duration == TimeSpan.MaxValue ? DateTime.MaxValue : DateTime.Now + currentOffer.Duration), billId);
@@ -186,10 +220,14 @@ namespace TelegramPaymentQiwiBot
 
                 InlineKeyboardMarkup priceMarkUp = new InlineKeyboardMarkup(buttons);
 
-                await BotClient.EditMessageTextAsync(update.CallbackQuery.Message.Chat.Id,
-                    update.CallbackQuery.Message.MessageId,
-                    "Чтобы ознакомиться с тарифом, выберите необходимый, нажав на соответствующую кнопку 🔥",
-                    replyMarkup: priceMarkUp);
+                try
+                {
+                    await BotClient.EditMessageTextAsync(update.CallbackQuery.Message.Chat.Id,
+                        update.CallbackQuery.Message.MessageId,
+                        "Чтобы ознакомиться с тарифом, выберите необходимый, нажав на соответствующую кнопку 🔥",
+                        replyMarkup: priceMarkUp);
+
+                } catch {}
             }
 
             if (update.Message?.Text == "/start" || update.Message?.Text == "💵 Тарифы")
@@ -207,13 +245,16 @@ namespace TelegramPaymentQiwiBot
                     new(new[] { new KeyboardButton[] { "💵 Тарифы", "⏳ Моя подписка" } })
                         { ResizeKeyboard = true };
 
-                await BotClient.SendTextMessageAsync(update.Message.Chat,
-                    "Чтобы ознакомиться с тарифом, выберите необходимый, нажав на соответствующую кнопку 🔥",
-                    replyMarkup: priceMarkUp);
-
-                await BotClient.SendTextMessageAsync(update.Message.Chat,
-                    "Чтобы ознакомиться со статусом аккаунта - выберите кнопку на клавиатуре 🔥",
-                    replyMarkup: keyboardMarkup);
+                try
+                {
+                    await BotClient.SendTextMessageAsync(update.Message.Chat,
+                        "Чтобы ознакомиться с тарифом, выберите необходимый, нажав на соответствующую кнопку 🔥",
+                        replyMarkup: priceMarkUp);
+                    await BotClient.SendTextMessageAsync(update.Message.Chat,
+                        "Чтобы ознакомиться со статусом аккаунта - выберите кнопку на клавиатуре 🔥",
+                        replyMarkup: keyboardMarkup);
+                }
+                catch {}
             }
 
             if (update.Message?.Text == "⏳ Моя подписка")
@@ -229,17 +270,24 @@ namespace TelegramPaymentQiwiBot
                         msg += $"{offer.OfferName} - активнo до {order.Until}\n";
                     }
 
-                    await BotClient.SendTextMessageAsync(update.Message.Chat, msg);
+                    try
+                    {
+                        await BotClient.SendTextMessageAsync(update.Message.Chat, msg);
+                    } catch {}
                 }
 
                 else
                 {
                     InlineKeyboardButton button = new InlineKeyboardButton("КУПИТЬ ✅");
                     button.CallbackData = "backToFullPrice";
-                    await BotClient.SendTextMessageAsync(update.Message.Chat,
-                        "⌛️ У Вас нет действующей подписки. \n" +
-                        "Ознакомьтесь с тарифами, нажав на соответствующую кнопку.",
-                        replyMarkup: new InlineKeyboardMarkup(button));
+
+                    try
+                    {
+                        await BotClient.SendTextMessageAsync(update.Message.Chat,
+                            "⌛️ У Вас нет действующей подписки. \n" +
+                            "Ознакомьтесь с тарифами, нажав на соответствующую кнопку.",
+                            replyMarkup: new InlineKeyboardMarkup(button));
+                    } catch {}
                 }
             }
         }
@@ -276,15 +324,18 @@ namespace TelegramPaymentQiwiBot
                         BaseOffer offer = (from off in Offers where off.Id == order.OfferId select off).First();
                         offer.PayConfirmed(BotClient, order.UserId);
                         Chat chat = await BotClient.GetChatAsync(order.UserId);
-                        Console.WriteLine("услуга куплена");
-                        await BotClient.SendTextMessageAsync(ReportEntityId, $"Была приобретена услуга \"{offer.OfferName}\" пользователем @{chat.Username}");
-                        await BotClient.SendTextMessageAsync(order.UserId, $"Была приобретена услуга \"{offer.OfferName}\"");
+
+                        try
+                        {
+                            await BotClient.SendTextMessageAsync(ReportEntityId, $"Была приобретена услуга \"{offer.OfferName}\" пользователем @{chat.Username}");
+                            await BotClient.SendTextMessageAsync(order.UserId, $"Была приобретена услуга \"{offer.OfferName}\"");
+                        } catch {}
 
                         lock (new object())
                         {
                             Orders.Add(order);
                             File.WriteAllText(UsersFileName, JsonSerializer.Serialize(Orders, new JsonSerializerOptions { WriteIndented = true }));
-                            Console.WriteLine("услуга сохранена");
+                            Console.WriteLine("offer saved");
                             break;
                         }
                     }

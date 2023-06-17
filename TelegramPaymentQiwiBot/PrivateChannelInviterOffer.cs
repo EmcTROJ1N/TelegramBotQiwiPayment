@@ -1,23 +1,18 @@
 ﻿using System.Text.Json.Serialization;
 using Qiwi.BillPayments.Model;
 using Telegram.Bot;
+using Telegram.Bot.Types;
 
 namespace TelegramPaymentQiwiBot
 {
     class PrivateChannelInviterOffer : BaseOffer
     {
         public long? Channel { get; set; }
+        public ChatInviteLink? ChannelInviteLink { get; set; }
         
-        [JsonConstructor]
-        public PrivateChannelInviterOffer() {}
-        public PrivateChannelInviterOffer(int id, int price, CurrencyEnum currency, string offerName, string comment, TimeSpan until, long channel)
+        public PrivateChannelInviterOffer(int id, int price, CurrencyEnum currency, string offerName, string comment, TimeSpan duration, long channel)
+            : base(OfferType.PrivateChannelInviteOffer, id, price, currency, offerName, comment, duration)
         {
-            Id = id;
-            Price = price;
-            Currency = currency;
-            OfferName = offerName;
-            Comment = comment;
-            Duration = until;
             Channel = channel;
         }
 
@@ -47,8 +42,8 @@ namespace TelegramPaymentQiwiBot
 
             try
             {
-                await bot.KickChatMemberAsync(Channel, userId);
-                await bot.UnbanChatMemberAsync(Channel, userId);
+                // await bot.KickChatMemberAsync(Channel, userId);
+                await bot.BanChatMemberAsync(Channel, userId);
                 await bot.SendTextMessageAsync(userId, $"Срок услуги {OfferName} истек, сожалеем");
             }
             catch {}

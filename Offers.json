@@ -1,0 +1,21 @@
+{
+  "Offers": [
+	  {
+		"Id": 1,
+		"Price": 150,
+		
+		"OfferName": "Test offer",
+		"Comment": "You will get access to test channel for month",
+		"Duration": "31.00:00:00"
+	  },
+	  {
+		"Id": 2,
+		"Price": 250,
+
+		"OfferName": "Test offer 2",
+		"Comment": "You will get access to test channel",
+		"Duration": "10675199.02:48:05.4775807" /* It`s max timespan value */
+	  }
+  ],
+  "ReportChannelId": -1001812379319
+}
